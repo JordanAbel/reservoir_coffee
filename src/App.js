@@ -13,7 +13,7 @@ import {useState} from 'react';
 import ScrollToTop from "./helperFunctions/scrollToTop";
 import Footer from "./components/footer/footer";
 
-export const BASE_URL = process.env.REACT_APP_BASE_URL || "/reservoir_coffee"
+export const BASE_URL = process.env.REACT_APP_BASE_URL || "/"
 
 console.log({BASE_URL})
 
