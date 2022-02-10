@@ -64,13 +64,10 @@ function Location(props) {
         
         const upcoming_items = props.items?.filter(x => Date.now() < dateValue(x.end_date || x.start_date))
         
-        console.log({upcoming_items})
-        
-        return <span style={{fontSize:'0.5em'}}>
+        return (upcoming_items.length > 0) ? <span style={{fontSize:'0.5em'}}>
                     Please note, we will be closed: <br/> {                     
                     upcoming_items?.map(item => <>{item.description}:&nbsp;&nbsp;<DateFormat from={item.start_date} to={item.end_date} /><br/></>) }                                        
-                </span>
-
+                </span> : <></>
 
     }
 
